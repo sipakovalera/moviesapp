@@ -1,0 +1,52 @@
+a:active, a:focus {
+   outline: none; 
+}
+
+li.page,
+li.points,
+li.next,
+li.previous{
+  display: inline;
+  list-style-type: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  text-transform: capitalize;
+}
+
+li.page:hover,
+li.points:hover{
+  color: #ffffff;
+  transition:all 0.5s ease;
+  font-size: 20px;
+}
+
+ul.pagination{
+  display: flex;
+  justify-content:space-around;
+  margin: 20px 100px;
+  border-radius: 5px;
+}
+
+li.previous,
+li.next{
+  padding: 5px 70px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+li.previous:hover,
+li.next:hover{
+  transition: all 0.5s ease;
+  background-color: #ffffff;
+  color: #f03c3c;
+  border: 2px solid #ffffff;
+}
+
+li.active{
+  color: #ffffff;
+  font-size: 25px;
+}
