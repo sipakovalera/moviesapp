@@ -7,12 +7,11 @@
 .overlay{
   position: absolute;
   inset: 0px;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255, .9);
   overflow: auto;
   border-radius: 4px;
   outline: none;
   padding: 20px;
-  overflow-y: hidden;
   width: 70%;
   height: 70%;
   display: inline;
@@ -21,7 +20,6 @@
 
 .modal_item{
   display: flex;
-  align-items:center;
 }
 
 .btn_close{
@@ -39,38 +37,58 @@ button.close{
   transition: 0.5s ease; 
 }
 
+.trailer{
+  text-align: center;
+}
+
+.trailer button{
+  font-size: 18px;
+  padding: 3px 20px;
+  background-color: #f03c3c;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.5s ease; 
+}
+
+.trailer span{
+  vertical-align: super;
+  padding: 0 5px;
+}
+
+
 button.close:hover{
   background-color: #000000;
   color: #ffffff;
   transition: all 0.5s ease;
 }
 
-.poster_modal img{
-  width: 100%;
+.trailer button:hover{
+  transition: all 0.5s ease;
+  color: #ffffff;
+  background-color: #939090;
 }
 
-.poster_modal{
-  max-width: 50%;
-  width: 40%;
+.poster_modal img{
+  width: 250px;
 }
 
 .context{
   margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  align-content: flex-start;
 }
 
 .title_modal span{
   color: #f03c3c;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .overview span{
   color: #000000;
   text-transform: none;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .rating_modal span{
@@ -86,11 +104,10 @@ button.close:hover{
 .title_modal,
 .overview,
 .rating_modal,
-.genre,
 .release_modal{
   color: #bdb6b6;
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 

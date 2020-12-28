@@ -6,7 +6,7 @@
 }
 
 .search_section{
-  padding: 100px 100px 50px;
+  padding: 100px 50px 20px 50px;
 }
 
 button:active,
@@ -16,6 +16,10 @@ button:active,
   outline: none;
 }
 
+.search_submit{
+  text-align: center;
+  margin: 20px 0;
+}
 
 html{
   width: 100%;
@@ -34,21 +38,21 @@ body {
 }
 
 .filter_section{
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
   padding: 20px 100px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%,rgba(0, 0, 0, 0) 100%);
 }
 
 .results{
   font-size: 22px;
-  font-weight: 700;
-  color: #f03c3c;
+  font-weight: 500;
+  color: #2c2b2b;
 }
 
-.filters{
-  display: flex;
-  align-items: center;
+.results span{
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
 }
 
 .not_found{
@@ -58,31 +62,6 @@ body {
   padding: 20px 0;
 }
 
-button.release,
-button.rating{
-  padding: 10px 30px;
-  font-size: 14px;
-  text-transform: uppercase;
-  border: 2px solid #f03c3c;
-  background-color: #ffffff7b;
-  transition: 0.5s ease;
-}
-
-button.release:hover,
-button.rating:hover{
-  background-color: #000000;
-  color: #ffffff;
-  border: 2px solid #000000;
-  transition: all 0.5s ease;
-}
-
-button.release{
-  margin: 0 30px;
-}
-
-.sort{
-  padding: 0 20px;
-}
 .banner{
   background-image: linear-gradient(to bottom, rgb(3, 0, 0) 0%,rgba(58, 20, 20, 0.692) 100%), url(../../pic/banner.jpg);
   background-position: center;
@@ -97,7 +76,7 @@ button.release{
 }
 
 input{
-  width: 100%;
+  width: 80%;
   margin: 20px 0 30px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -107,47 +86,20 @@ input{
   color: #fcf8f8;
 }
 
-
-.option{
-  display: flex;
-}
-
-.option h2{
-  font-size: 22px;
-  color: #fcf8f8;
-  text-transform: uppercase;
-}
-
 button{
   cursor: pointer;
   border: none;
   border-radius: 5px;
 }
 
-.option button{
-  padding: 5px 30px;
-  margin: 0 10px;
-  text-transform: uppercase;
-  font-size: 14px;
-  border: 1px solid #f03c3c;
-  color: #f03c3c;
-  transition: 0.5s ease;
-  background-color: #ffffffc9;
-}
-
-.option button:hover{
-  background-color: #f03c3c;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-
 button.search{
-  padding: 5px 50px;
+  padding: 11px 21px;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 22px;
   background-color: #f03c3c;
   color: #ffffff;
   transition: 0.5s ease;
+  margin: 0 5px;
 }
 
 button.search:hover{
