@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
-import MovieItem from '../../movie_item/movie_item';
 
  const Pagination = ({ totalPage, handlePageClick, selectedPage }) => {
 

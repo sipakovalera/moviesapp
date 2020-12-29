@@ -8,6 +8,10 @@ export const searchMovies = (query) => {
   return get('/search/movie', { params: { query } });
 };
 
+export const popularMovies = () => {
+  return get('/movie/top_rated', { params: {page: 1}  });
+}; 
+
 export const detailsMovies = (movie_id) => {
   return get('/movie', { params: { movie_id }  });
 }; 

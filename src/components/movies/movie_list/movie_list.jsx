@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import MovieItem from '../movie_item/movie_item'; 
 import ModalWindow from '../../modal/modal';
 import Loader from '../../loader/loader';
-import Pagination from './pagination/pagination';
+import Pagination from '../../pagination/pagination';
+import '../../pagination/pagination.css';
 import PopularMovies from '../../popular/popular_movies';
-import './pagination/pagination.css';
 
 import { fetchMovies, searchMovies } from '../../../resources/movie.api';
 
@@ -21,6 +21,7 @@ const MovieList = () => {
 
   useEffect(() => {
     const init = async() => {
+      debugger;
       setLoading(true);
       const data = await fetchMovies(currentPage + 1);
         setAllStates(data);
@@ -67,8 +68,7 @@ const MovieList = () => {
   }
 
   return (
-      <div className="container">
-        <PopularMovies />
+      <div className="container"> 
           <div className="banner">
             <div className="search_section">
               <form onSubmit={handleOnSubmit}>
@@ -89,12 +89,11 @@ const MovieList = () => {
                 </label>
               </form>
           </div> 
+          <PopularMovies />
         </div>
-        <div className="filter_section">
           <div className="results">
             <p>Found <span>{totalResults}</span> movies</p>
           </div>
-        </div>
         <div className="movie_list">
             {loading ? <Loader /> : movies.length ? (movies.map((movie) => (
               <MovieItem 
