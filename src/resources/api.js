@@ -10,7 +10,7 @@ const client = axios.create({
 export const get = async (url, options = {}) => {
   const response = await client.get(url, options);
   return response.data;
-  
+    
 };
 
 export default client;

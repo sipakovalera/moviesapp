@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './popular_movies.css';
-import PopularItem from './popular_item/popular_item';
-import { popularMovies } from '../../resources/movie.api';
+import PopularItem from '../popular_item/popular_item';
+import { popularMovies } from '../../../resources/movie.api';
 import Carousel from 'react-elastic-carousel';
 
-function PopularMovies() {
-
+const PopularMovies = () => {
   const [allPopular, setAllPopular] = useState([]);
 
   useEffect(() => {
@@ -18,21 +17,20 @@ function PopularMovies() {
     init();
   }, []);
 
-
   return (
     <div className="slider_container">
-    <div className="title_slider">20 Top Rated Movies</div>
+      <div className="title_slider">20 Top Rated Movies</div>
       <Carousel 
         autoPlaySpeed={5000}
         enableAutoPlay={true}
         pagination={true}
         itemsToShow={4}
       >
-          {allPopular.map((popular) => (
-            <PopularItem
-              key={popular.id}
-              popular={popular} />
-          ))}
+      {allPopular.map((popular) => (
+        <PopularItem
+          key={popular.id}
+          popular={popular} />
+      ))}
       </Carousel>
     </div>
   );

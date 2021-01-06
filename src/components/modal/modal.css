@@ -37,35 +37,10 @@ button.close{
   transition: 0.5s ease; 
 }
 
-.trailer{
-  text-align: center;
-}
-
-.trailer button{
-  font-size: 18px;
-  padding: 3px 20px;
-  background-color: #f03c3c;
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: 0.5s ease; 
-}
-
-.trailer span{
-  vertical-align: super;
-  padding: 0 5px;
-}
-
-
 button.close:hover{
   background-color: #000000;
   color: #ffffff;
   transition: all 0.5s ease;
-}
-
-.trailer button:hover{
-  transition: all 0.5s ease;
-  color: #ffffff;
-  background-color: #939090;
 }
 
 .poster_modal img{

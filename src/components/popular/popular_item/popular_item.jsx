@@ -2,8 +2,8 @@ import React from 'react';
 import './popular_item.css';
 import { IMG_API } from '../../movies/movie_item/movie_item';
 
- const PopularItem = ({ popular }) => {
-     const {poster_path, title, vote_average, overview} = popular;
+const PopularItem = ({ popular }) => {
+    const {poster_path, title, vote_average, overview} = popular;
 
     return (
         <div className="slider_popular">
@@ -11,7 +11,7 @@ import { IMG_API } from '../../movies/movie_item/movie_item';
                 <img src={`${IMG_API}${poster_path}`} alt={title} />
             </div>
             <div className="popular_captain">
-              <div className="title_popular">{title}</div> 
+                <div className="title_popular">{title}</div> 
                 <div className="rating_popular">{vote_average}</div>
             </div>  
             <div className="overview_popular">
