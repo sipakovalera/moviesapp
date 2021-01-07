@@ -16,8 +16,7 @@ const MovieList = () => {
   const [ currentPage, setCurrentPage ] = useState(0);
   const [ loading, setLoading ] = useState(false);
   const [ totalPage, setTotalPage ] = useState(0);
-  const [totalResults, setTotalResults ] = useState(0);
-
+  const [ totalResults, setTotalResults ] = useState(0);
 
   useEffect(() => {
     const init = async() => {
@@ -38,7 +37,6 @@ const MovieList = () => {
   
       init()
   }, [search]);  
-
 
   const setAllStates = (data) => {
     const { total_pages, total_results, results} = data;

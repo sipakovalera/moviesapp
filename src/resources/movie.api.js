@@ -12,6 +12,6 @@ export const popularMovies = () => {
   return get('/movie/top_rated', { params: {page: 1}  });
 }; 
 
-export const trailerMovies = (movie_id) => {
-  return get('/movie', { params: { movie_id }  });
+export const trailerMovies = (movies) => {
+  return get(`movie/${movies}/videos`, {params: {}});
 }; 

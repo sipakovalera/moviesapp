@@ -4,7 +4,7 @@ import './movie_item.css';
 export const IMG_API = `https://image.tmdb.org/t/p/w1280`;
 
 const MovieItem = ({ movie, onMovieClick }) => {
-  const {title, poster_path, vote_average, release_date} = movie;
+  const {title, poster_path, vote_average, release_date } = movie;
   
   return (
     <div className="movie_item" onClick={() => onMovieClick(movie)}>

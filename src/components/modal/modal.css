@@ -12,8 +12,8 @@
   border-radius: 4px;
   outline: none;
   padding: 20px;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
   display: inline;
   margin: auto;
 }
@@ -44,7 +44,7 @@ button.close:hover{
 }
 
 .poster_modal img{
-  width: 200px;
+  max-width: 300px;
 }
 
 .context{
