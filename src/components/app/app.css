@@ -6,7 +6,7 @@
 }
 
 .search_section{
-  padding: 70px 50px 20px 50px;
+  padding: 0 50px 20px 50px;
 }
 
 button:active,
@@ -29,12 +29,13 @@ html{
 body {
   width: 100%;
   max-width: 100%;
-  background-color: #f03c3c;
+
 }
 
 .container{
   margin: auto;
   width: 100%;
+  background-color: #f03c3c;
 }
 
 
@@ -126,4 +127,7 @@ label h1{
   padding: 10px 0;
 }
 
-
+.favourite i{
+  margin: 30px 100px;
+  color: #f03c3c;
+}

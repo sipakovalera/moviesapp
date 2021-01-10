@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MovieItem from '../movie_item/movie_item'; 
 import ModalWindow from '../../modal/modal';
 import Loader from '../../loader/loader';
@@ -21,22 +21,16 @@ const MovieList = () => {
   useEffect(() => {
     const init = async() => {
       setLoading(true);
-      const data = await fetchMovies(currentPage + 1);
-        setAllStates(data);
-    }
+      if(search){
+        const data = await searchMovies(search);
+          setAllStates(data);
+      } else {
+        const data = await fetchMovies(currentPage + 1);
+          setAllStates(data);
+    }}
 
       init()
-  }, [currentPage]);
-
-  useEffect(() => {
-    const init = async() => {
-      setLoading(true);
-      const data = await searchMovies(search);
-        setAllStates(data);
-    }
-  
-      init()
-  }, [search]);  
+  }, [ currentPage, search ]);
 
   const setAllStates = (data) => {
     const { total_pages, total_results, results} = data;
@@ -48,9 +42,7 @@ const MovieList = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    if (search) {
       setSearch(search);
-    }
   }
 
   const handleOnChange = (search) => {
@@ -58,16 +50,17 @@ const MovieList = () => {
   }
 
   const handlePageClick = ({  selected:selectedPage }) => {
-     if(search){
-       setSearch(search);
-       setCurrentPage(selectedPage);
-     }
      setCurrentPage(selectedPage);
   }
 
   return (
-    <div className="container"> 
+    <div className="container">
       <div className="banner">
+        <div className="favourite">
+          <Link to="/favourite">
+            <i className="fas fa-heart fa-3x"></i>
+          </Link>
+        </div>
         <div className="search_section">
           <form onSubmit={handleOnSubmit}>
             <label>
