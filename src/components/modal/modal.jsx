@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './modal.css';
 import { IMG_API, defaultPoster } from '../movies/movie_item/movie_item';
 import TrailerMovies from '../trailer/trailer_movies';
-import Details from '../details/details';
 
 const ModalWindow = ({movie, onClose }) => {
   const { title, poster_path: posterPath, overview,  vote_average: rating, release_date, id } = movie || {};
