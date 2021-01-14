@@ -130,4 +130,10 @@ label h1{
 .favourite i{
   margin: 30px 100px;
   color: #f03c3c;
+  transition: 0.5s ease;
+}
+
+.favourite i:hover{ 
+  transform: scale(1.5);
+  transition: all 0.5s ease;
 }

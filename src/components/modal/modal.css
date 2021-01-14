@@ -86,7 +86,7 @@ button.close:hover{
 .overview,
 .rating_modal,
 .release_modal{
-  color: #bdb6b6;
+  color: #898686;
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -96,9 +96,25 @@ button.close:hover{
   text-align: center;
   padding: 10px 0;
   opacity: .5;
+  transition: 0.5s ease;
 }
 
 .btn_add_fav:hover{
   opacity: 1;
+  transition: all 0.5s ease;
+  }
+
+.btn_details{
+  transition: 0.5s ease;
+  background: #333232a1;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 5px 50px;
+  font-size: 16px;
+  margin: 20px 0;
 }
 
+.btn_details:hover{
+  transition: all 0.5s ease;
+  background-color: black;
+}
