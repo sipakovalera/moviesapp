@@ -8,10 +8,10 @@ const TrailerItem = ({keyObj, name}) =>{
       <button 
         type="button" 
         name="trailer">
-         <a href={urlTrailer} rel="noreferrer" target="_blank"><span>{name}</span></a>
+        <a href={urlTrailer} rel="noreferrer" target="_blank"><span>{name}</span></a>
           <i className="fas fa-eye"></i>
       </button>
-    </div>
+    </div>  
   )
 }
 

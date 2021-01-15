@@ -1,15 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { detailsMovies } from '../../resources/movie.api';
+import Detail from './detail';
 import './details.css';
 
-const Details = ({movie}) => {
-  const { title } = movie || {};
+const Details = ({ openDetails }) => {
+  const [details, setDetails] = useState(''); 
+
+  useEffect(() => {
+    const init = async() => {
+      const data = await detailsMovies(openDetails);
+      const { results } = data;
+      setDetails(results);
+    }
+
+      init()
+  }, [openDetails]);
+
   return (
     <div className="details_container">
-    <Link to="/"><button className="btn_home">Go Home</button></Link>
-      <div className="details_title">{title}</div>
-    </div>
-  )
+      {details.length > 0 && details.map((detail) => (
+        <Detail
+          key={detail.id}
+          detail={detail}
+        />
+      ))}
+   </div>  
+  )    
 }
 
 export default Details;

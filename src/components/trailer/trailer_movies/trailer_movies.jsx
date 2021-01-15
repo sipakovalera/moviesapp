@@ -18,7 +18,7 @@ const TrailerMovies = ({ openTrailer }) => {
   }, [openTrailer]);
 
   return(
-    <div>
+    <div className="trailers_container">
       {trailer.length > 0 && trailer.map((item) => (
         <TrailerItem
           key={item.id}

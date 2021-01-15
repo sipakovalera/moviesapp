@@ -1,15 +1,17 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom';
 import './modal.css';
 import { IMG_API, defaultPoster } from '../movies/movie_item/movie_item';
 import TrailerMovies from '../trailer/trailer_movies';
+import Details from '../details/details';
+import { Link } from 'react-router-dom';
 
 const ModalWindow = ({movie, onClose }) => {
   const { title, poster_path: posterPath, overview,  vote_average: rating, release_date, id } = movie || {};
 
+
   const addFavourite = () => {
-    console.log(movie.title)
+    console.log(movie)
   }
 
   return (
@@ -31,7 +33,7 @@ const ModalWindow = ({movie, onClose }) => {
               <div className="btn-favourite">
                 <button
                   className="btn_add_fav"
-                  onClick={() => addFavourite(movie)}
+                  onClick={() => addFavourite()}
                   >
                   <i className="fas fa-heart fa-3x"></i>
                 </button>
@@ -44,7 +46,12 @@ const ModalWindow = ({movie, onClose }) => {
               <div className="release_modal">Release date: <span>{release_date}</span></div>
               <TrailerMovies openTrailer={id} />
               <Link to={`/${id}`}>
-                <button type="button" className="btn_details">More details</button>
+                <button 
+                  type="button" 
+                  className="btn_details"
+                >
+              <Details openDetails={id} />
+                More details</button>
               </Link>
             </div>       
           </div>
