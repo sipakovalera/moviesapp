@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './favourite.css';
 import {Link } from 'react-router-dom'
-import FavouriteItem from '../favourite_item/favourite_item';
+import MovieItem from '../movies/movie_item/movie_item';
 
 const FavouriteMovies = () => {
   const [favouriteMovies, setFavouriteMovis ] = useState([]);
@@ -18,7 +18,7 @@ const FavouriteMovies = () => {
         <span>Favourite movies</span>
         <div className="favourite_list">
           {favouriteMovies.map((movie)=> (
-            <FavouriteItem 
+            <MovieItem
               movie={movie}
               key={movie.id}
             />

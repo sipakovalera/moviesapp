@@ -9,11 +9,6 @@ import { Link } from 'react-router-dom';
 const ModalWindow = ({movie, onClose }) => {
   const { title, poster_path: posterPath, overview,  vote_average: rating, release_date, id } = movie || {};
 
-
-  const addFavourite = () => {
-    console.log(movie)
-  }
-
   return (
     <Modal 
       isOpen={movie !== null} 
@@ -33,7 +28,6 @@ const ModalWindow = ({movie, onClose }) => {
               <div className="btn-favourite">
                 <button
                   className="btn_add_fav"
-                  onClick={() => addFavourite()}
                   >
                   <i className="fas fa-heart fa-3x"></i>
                 </button>
@@ -45,13 +39,9 @@ const ModalWindow = ({movie, onClose }) => {
               <div className="rating_modal">Rating: <span>{rating}</span></div>
               <div className="release_modal">Release date: <span>{release_date}</span></div>
               <TrailerMovies openTrailer={id} />
-              <Link to={`/${id}`}>
-                <button 
-                  type="button" 
-                  className="btn_details"
-                >
-              <Details openDetails={id} />
-                More details</button>
+              <Link to={`/${id}`} className="btn_details">
+              <Details checkDetails={id} />
+                More details
               </Link>
             </div>       
           </div>
