@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import './modal.css';
 import { IMG_API, defaultPoster } from '../movies/movie_item/movie_item';
 import TrailerMovies from '../trailer/trailer_movies';
 import Details from '../details/details';
 import { Link } from 'react-router-dom';
+import { detailsMovies } from '../../resources/movie.api';
 
 const ModalWindow = ({movie, onClose }) => {
   const { title, poster_path: posterPath, overview,  vote_average: rating, release_date, id } = movie || {};
+
+  const [detail, setDetail] = useState(''); 
+  
+    useEffect(() => {
+      const init = async() => {
+        const data = await detailsMovies(id);
+        setDetail(data);
+      }
+  
+        init()
+    }, [id]);
+
 
   return (
     <Modal 
@@ -25,10 +38,12 @@ const ModalWindow = ({movie, onClose }) => {
           <div className="modal_item">
             <div className="poster_modal">
               <img src={posterPath ?  (`${IMG_API}${posterPath}`) : defaultPoster } alt={title}/>
-                  <Link to={`/${id}`} className="btn_details">
-                    <Details checkDetails={id} />
-                     More details
-                  </Link>
+              <Link to={`/${id}`} className="btn_details">
+                <Details 
+                  detail={detail}
+                />
+                  More details
+              </Link>
             </div>
             <div className="context">
               <div className="title_modal">Title: <span>{title}</span></div>

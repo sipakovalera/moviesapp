@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import MovieItem from '../movie_item/movie_item'; 
 import ModalWindow from '../../modal/modal';
 import Loader from '../../loader/loader';

@@ -1,33 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { detailsMovies } from '../../resources/movie.api';
+import React from 'react';
 import './details.css';
-import DetailItem from './detail_item';
+import DetailItem from './detail_item/detail_item';
 
-const Details = ({ checkDetails }) => {
-  
-  const [detail, setDetail] = useState(''); 
-debugger;
-  useEffect(() => {
-    const init = async() => {
-      const data = await detailsMovies(checkDetails);
-      const { results } = data;
-      setDetail(results);
-      console.log(results);
-    }
 
-      init()
-  }, [checkDetails]);
-
+const Details = ({detail}) => {
 
   return (
-    <div className="details_container">
-      {detail.length > 0 && detail.map((item) => (
-        <DetailItem
-          detail={item.key}
-        />
-      ))}
+    <div className="details_container">  
+        <DetailItem item={detail}/>
    </div>  
   )    
-}
+  }
 
 export default Details;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const DetailItem = ({detail}) => {
-  console.log(detail)
+const DetailItem = ({item}) => {
+  console.log(item)
   return (
     <div className="detail_container">
-      
+    
     </div>  
   )
 }
