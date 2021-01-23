@@ -56,11 +56,6 @@ const MovieList = () => {
   return (
     <div className="container">
       <div className="banner">
-        <div className="favourite">
-          <Link to="/favourite">
-            <i className="fas fa-heart fa-3x"></i>
-          </Link>
-        </div>
         <div className="search_section">
           <form onSubmit={handleOnSubmit}>
             <label>

@@ -16,6 +16,6 @@ export const trailerMovies = (movies) => {
   return get(`/movie/${movies}/videos`, {params: {}});
 }; 
 
-export const detailsMovies = (details) => {
-  return get(`/movie/${details}`, {params: {}});
+export const detailsMovies = (movie_id) => {
+  return get(`/movie/${movie_id}`, {params: {}});
 }; 

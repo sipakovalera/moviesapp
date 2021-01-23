@@ -25,13 +25,10 @@ const ModalWindow = ({movie, onClose }) => {
           <div className="modal_item">
             <div className="poster_modal">
               <img src={posterPath ?  (`${IMG_API}${posterPath}`) : defaultPoster } alt={title}/>
-              <div className="btn-favourite">
-                <button
-                  className="btn_add_fav"
-                  >
-                  <i className="fas fa-heart fa-3x"></i>
-                </button>
-              </div>
+                  <Link to={`/${id}`} className="btn_details">
+                    <Details checkDetails={id} />
+                     More details
+                  </Link>
             </div>
             <div className="context">
               <div className="title_modal">Title: <span>{title}</span></div>
@@ -39,10 +36,6 @@ const ModalWindow = ({movie, onClose }) => {
               <div className="rating_modal">Rating: <span>{rating}</span></div>
               <div className="release_modal">Release date: <span>{release_date}</span></div>
               <TrailerMovies openTrailer={id} />
-              <Link to={`/${id}`} className="btn_details">
-              <Details checkDetails={id} />
-                More details
-              </Link>
             </div>       
           </div>
         </div>

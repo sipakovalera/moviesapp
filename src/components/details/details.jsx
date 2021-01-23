@@ -7,13 +7,11 @@ const Details = ({ checkDetails }) => {
   
   const [detail, setDetail] = useState(''); 
 debugger;
-console.log(checkDetails);
   useEffect(() => {
     const init = async() => {
       const data = await detailsMovies(checkDetails);
       const { results } = data;
       setDetail(results);
-      console.log(data);
       console.log(results);
     }
 
@@ -25,7 +23,6 @@ console.log(checkDetails);
     <div className="details_container">
       {detail.length > 0 && detail.map((item) => (
         <DetailItem
-          key={item.id}
           detail={item.key}
         />
       ))}
