@@ -9,6 +9,7 @@
   position: relative;
   width: 300px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .popular_captain{
@@ -41,21 +42,24 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: #000000;
   transform: translateY(100%);
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   opacity: .9;
+  color: #ffffff;
+  transition: 0.5s ease;
 }
 
 .overview_popular p{
   font-size: 18px;
   font-weight: 700;
-  color: rgb(47, 11, 4);
+  color: rgb(211, 30, 30);
   padding: 10px;
 }
 
 .slider_popular:hover .overview_popular{
   transform: translateY(0%);
+  transition: all 0.5s ease;
 }

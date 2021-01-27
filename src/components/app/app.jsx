@@ -7,7 +7,6 @@ import Details from '../details/details';
 
 ReactModal.setAppElement('#root');
 
-
 const App = () => {
   return ( 
     <Router>

@@ -13,7 +13,7 @@
   outline: none;
   padding: 20px;
   width: 80%;
-  height: 80%;
+  height: 90%;
   display: inline;
   margin: auto;
 }
@@ -51,6 +51,7 @@ button.close:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
 
 .context{
@@ -58,6 +59,7 @@ button.close:hover{
   display: flex;
   flex-direction: column;
   align-content: flex-start;
+  width: 60%;
 }
 
 .title_modal span{
@@ -96,11 +98,13 @@ button.close:hover{
   background: #333232a1;
   color: #ffffff;
   text-transform: uppercase;
-  padding: 5px 50px;
-  font-size: 16px;
   margin: 20px 0;
   cursor: pointer;
   text-decoration: none;
+  padding: 5px 50px;
+  font-size: 18px;
+  transition: 0.5s ease; 
+  border-radius: 5px;
 }
 
 .btn_details:hover{

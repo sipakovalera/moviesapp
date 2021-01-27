@@ -1,8 +1,6 @@
 import React from 'react';
 import './movie_item.css';
-
-export const IMG_API = `https://image.tmdb.org/t/p/w1280`;
-export const defaultPoster = 'https://i.dlpng.com/static/png/6387956_preview.png';
+import { IMG_API, defaultPoster } from '../../../const/constant';
 
 const MovieItem = ({ movie, onMovieClick }) => {
   const {title, poster_path, vote_average, release_date } = movie;

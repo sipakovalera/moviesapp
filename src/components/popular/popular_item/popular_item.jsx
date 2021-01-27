@@ -1,6 +1,6 @@
 import React from 'react';
 import './popular_item.css';
-import { IMG_API } from '../../movies/movie_item/movie_item';
+import { IMG_API } from '../../../const/constant';
 
 const PopularItem = ({ popular }) => {
   const {poster_path, title, vote_average, overview} = popular;
